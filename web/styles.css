@@ -1,0 +1,123 @@
+:root{--ink:#14251f;--muted:#718078;--green:#075d46;--mint:#e3efe9;--cream:#f5f3ec;--paper:#fcfbf7;--line:#dde3de;--red:#a34a39}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+a{color:inherit;text-decoration:none}
+button,select,input{font:inherit}
+header{height:82px;padding:0 max(28px,calc((100% - 1240px)/2));display:flex;align-items:center;border-bottom:1px solid var(--line);background:rgba(245,243,236,.9);position:sticky;top:0;z-index:5;backdrop-filter:blur(15px)}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand>span{font:bold 23px Georgia;color:white;background:var(--green);border-radius:50%;width:46px;height:46px;display:grid;place-items:center}
+.brand b{line-height:1.15}
+.brand small{font-size:10px;color:var(--muted);font-weight:500;letter-spacing:.08em}
+nav{display:flex;gap:35px;margin-right:40px}
+nav a{font-size:13px;color:var(--muted)}
+.live{font-size:11px;color:var(--muted)}
+.live i{display:inline-block;width:7px;height:7px;background:#44a77c;border-radius:50%;margin-right:7px;box-shadow:0 0 0 5px #dbece4}
+main{max-width:1240px;margin:auto;padding:0 28px}
+.hero{min-height:570px;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:90px}
+.kicker{color:var(--green);font-size:10px;font-weight:800;letter-spacing:.22em}
+.hero h1{font:500 clamp(48px,5vw,72px)/1.13 Georgia,"Songti SC",serif;letter-spacing:-.035em;margin:22px 0}
+.hero h1 em{font-style:normal;color:var(--green)}
+.lead{max-width:620px;color:var(--muted);font-size:16px;line-height:1.9}
+.actions{display:flex;align-items:center;gap:25px;margin-top:34px}
+.actions button,#saveSchedule{border:0;background:var(--green);color:white;padding:14px 23px;border-radius:11px;cursor:pointer;box-shadow:0 12px 26px #0a5c4530}
+.actions button:disabled{opacity:.65}
+.actions a{color:var(--green);font-weight:700}
+.hero aside{background:linear-gradient(145deg,#123d31,#08281f);color:white;padding:35px;border-radius:28px;min-height:365px;box-shadow:0 30px 65px #173b3035}
+.hero aside>p{color:#9fbcb1;font-size:11px;letter-spacing:.15em}
+.hero aside>strong{display:block;font:500 98px/1 Georgia;margin-top:34px;letter-spacing:-.07em}
+.hero aside>span{color:#a9c1b8}
+.bars{height:70px;display:flex;align-items:end;gap:8px;margin:30px 0 20px;border-bottom:1px solid #ffffff22}
+.bars i{flex:1;background:linear-gradient(#62c397,#174c3b);height:45%;border-radius:3px}
+.bars i:nth-child(2){height:70%}
+.bars i:nth-child(3){height:55%}
+.bars i:nth-child(4){height:86%}
+.bars i:nth-child(5){height:62%}
+.bars i:nth-child(6){height:96%}
+.hero aside footer{display:flex;justify-content:space-between;color:#91aca2;font-size:11px}
+.hero aside footer b{color:#dae9e3}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:#ffffff8f;border-radius:18px}
+.metrics article{padding:24px 28px;border-right:1px solid var(--line)}
+.metrics article:last-child{border:0}
+.metrics small,.metrics span{display:block;color:var(--muted);font-size:10px}
+.metrics b{font:500 31px Georgia;display:block;margin:5px 0}
+.products{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end}
+.section-head h2,.split h2,.settings h2{font:500 38px Georgia,"Songti SC",serif;margin:8px 0}
+.section-head p{color:var(--muted);margin:0}
+.exports{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.exports a{padding:9px 13px;font-size:11px;background:#ffffff80}
+.exports a+a{border-left:1px solid var(--line)}
+.toolbar{display:grid;grid-template-columns:1fr 150px 140px 125px 160px;gap:10px;margin:32px 0 25px}
+.toolbar>*{height:45px;border:1px solid var(--line);border-radius:10px;background:#ffffff9c;padding:0 13px;color:var(--ink)}
+.search{display:flex;align-items:center;gap:8px}
+.search input{border:0;outline:0;background:transparent;width:100%}
+.catalog{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;min-width:0}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 18px 35px #193c3020}
+.product-image{height:220px;background:#fff;display:grid;place-items:center;position:relative}
+.product-image img{width:100%;height:100%;object-fit:contain}
+.tag{position:absolute;top:12px;left:12px;background:#0b604ce8;color:white;font-size:9px;padding:5px 8px;border-radius:6px}
+.product-body{padding:17px}
+.brand-name{font-size:10px;color:var(--green);font-weight:800;letter-spacing:.08em}
+.product-body h3{font-size:14px;line-height:1.55;height:44px;overflow:hidden;margin:7px 0}
+.spec{font-size:11px;color:var(--muted);height:19px}
+.price-row{display:flex;align-items:end;justify-content:space-between;margin-top:15px}
+.price{font:bold 20px Georgia;color:#b04732}
+.price small{font:10px sans-serif;margin-right:2px}
+.stock{font-size:10px;padding:4px 7px;border-radius:6px;background:var(--mint);color:var(--green)}
+.stock.out{background:#eee8e1;color:#8d6d5c}
+.card-meta{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:13px;font-size:10px;color:var(--muted)}
+.loading,.empty{grid-column:1/-1;text-align:center;padding:70px;color:var(--muted)}
+.pager{display:flex;justify-content:center;align-items:center;gap:20px;margin-top:35px}
+.pager button{border:1px solid var(--line);background:#fff;padding:8px 14px;border-radius:8px;cursor:pointer}
+.pager button:disabled{opacity:.4}
+.pager span{font-size:12px;color:var(--muted)}
+.split{border-top:1px solid var(--line);padding:90px 0;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.panel{background:#ffffff8a;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.row{display:grid;grid-template-columns:105px 1fr auto;gap:12px;padding:15px 17px;border-bottom:1px solid var(--line);align-items:center;font-size:11px}
+.row:last-child{border:0}
+.row time{color:var(--muted)}
+.badge{padding:4px 7px;border-radius:99px;background:var(--mint);color:var(--green);width:max-content}
+.badge.failed{background:#f5ded8;color:var(--red)}
+.row small{color:var(--muted)}
+.settings{border-top:1px solid var(--line);padding:85px 0;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.settings>div>p:last-child{color:var(--muted);max-width:540px}
+.schedule{background:#10392e;color:white;border-radius:20px;padding:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.schedule label{display:flex;align-items:center;gap:8px;font-size:12px}
+.schedule select{margin-left:auto;padding:9px;border-radius:8px;background:#1a4a3d;color:white;border:1px solid #ffffff2b}
+.schedule button{padding:10px 14px;box-shadow:none}
+.schedule small{width:100%;padding-top:15px;border-top:1px solid #ffffff1c;color:#9fbcb1}
+.notice{margin:10px 0 90px;padding:28px;border:1px solid #cddbd3;background:#e7efe9;border-radius:18px;display:grid;grid-template-columns:120px 1fr auto;align-items:center;gap:25px}
+.notice p{color:#597067;margin:0}
+.notice a{color:var(--green);font-weight:700}
+.site-footer{max-width:1184px;margin:auto;border-top:1px solid var(--line);padding:35px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:10px}
+#toast{position:fixed;right:25px;bottom:25px;background:#123d31;color:white;padding:13px 17px;border-radius:10px;opacity:0;transform:translateY(20px);transition:.2s;z-index:9}
+#toast.show{opacity:1;transform:none}
+#toast.error{background:#8f4135}
+@media(max-width:950px){nav{display:none}
+.hero{grid-template-columns:1fr}
+.hero aside{display:none}
+.catalog{grid-template-columns:repeat(2,1fr)}
+.toolbar{grid-template-columns:1fr 1fr}
+.split{grid-template-columns:1fr}
+.metrics{grid-template-columns:1fr 1fr}
+.metrics article:nth-child(2){border-right:0}
+.notice{grid-template-columns:1fr}
+.settings{grid-template-columns:1fr}
+.site-footer{padding:30px;gap:15px;flex-wrap:wrap}
+}
+@media(max-width:590px){header,main{padding-left:16px;padding-right:16px}
+.live{font-size:0}
+.hero{min-height:490px}
+.hero h1{font-size:43px}
+.metrics,.catalog{grid-template-columns:1fr}
+.metrics article{border-right:0;border-bottom:1px solid var(--line)}
+.section-head{display:block}
+.exports{margin-top:20px;width:max-content}
+.toolbar{grid-template-columns:1fr}
+.product-image{height:260px}
+.site-footer{display:block}
+.site-footer span{display:block;margin:8px 0}
+}
+

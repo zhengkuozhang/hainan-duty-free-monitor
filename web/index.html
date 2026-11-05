@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cdf海南免税 · 商品监测系统</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header><a class="brand" href="#"><span>cdf</span><b>海南免税<br><small>商品监测系统</small></b></a><nav><a href="#products">商品库</a><a href="#insights">采集记录</a><a href="#settings">自动任务</a></nav><div class="live"><i></i> 本地服务正常</div></header>
+<main>
+<section class="hero"><div><p class="kicker">PUBLIC CATALOG INTELLIGENCE</p><h1>看清免税商品的<br><em>价格与库存变化</em></h1><p class="lead">聚焦 cdf 海南免税官方商城公开商品目录，以低频快照持续记录价格、库存、品牌与促销信息。</p><div class="actions"><button id="refresh">立即采集 5 页</button><a href="#products">查看商品 →</a></div></div>
+<aside><p>本次监测商品</p><strong id="heroCount">—</strong><span>条有效公开记录</span><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><footer><span>最近更新</span><b id="heroTime">尚未采集</b></footer></aside></section>
+<section class="metrics"><article><small>监测商品</small><b id="total">—</b><span>ITEMS</span></article><article><small>品牌数量</small><b id="brands">—</b><span>BRANDS</span></article><article><small>有货可售</small><b id="available">—</b><span>AVAILABLE</span></article><article><small>促销商品</small><b id="promoted">—</b><span>PROMOTED</span></article></section>
+<section id="products" class="products">
+<div class="section-head"><div><p class="kicker">PRODUCT CATALOG</p><h2>公开商品监测库</h2><p>显示已采集快照，不代表官网全部商品或实时库存。</p></div><div class="exports"><a href="/download/csv">CSV</a><a href="/download/json">JSON</a><a href="/download/database">数据库备份</a></div></div>
+<div class="toolbar"><label class="search">⌕ <input id="search" placeholder="搜索商品、品牌或商品编码"></label><select id="brand"><option value="">全部品牌</option></select><select id="category"><option value="">全部分类</option></select><select id="stock"><option value="all">全部库存</option><option value="available">仅有货</option><option value="soldout">缺货</option></select><select id="sort"><option value="updated">最近更新</option><option value="price_asc">价格从低到高</option><option value="price_desc">价格从高到低</option><option value="stock_desc">库存从高到低</option></select></div>
+<div id="catalog" class="catalog"><div class="loading">正在读取商品数据…</div></div><div class="pager"><button id="prev">上一页</button><span id="pageInfo">第 1 页</span><button id="next">下一页</button></div>
+</section>
+<section id="insights" class="split"><div><p class="kicker">COLLECTION RUNS</p><h2>采集记录</h2><div id="history" class="panel"></div></div><div><p class="kicker">DATA CHANGES</p><h2>商品变更</h2><div id="changes" class="panel"></div></div></section>
+<section id="settings" class="settings"><div><p class="kicker">AUTOMATION</p><h2>温和、持续地更新数据</h2><p>默认每 24 小时采集一次，限制请求页面并保留历史快照。采集失败时不会覆盖上一版有效数据。</p></div><div class="schedule"><label><input id="enabled" type="checkbox"><span></span>启用自动采集</label><select id="interval"><option value="6">每 6 小时</option><option value="12">每 12 小时</option><option value="24">每 24 小时</option><option value="48">每 48 小时</option><option value="72">每 72 小时</option></select><button id="saveSchedule">保存设置</button><small>下次执行：<b id="nextRun">—</b></small></div></section>
+<section class="notice"><b>合规边界</b><p>仅采集官网无需登录即可访问的商品名称、公开价格、库存字段、品牌、规格和促销标签。不采集会员身份、订单、支付、购物车或个人信息。销量仅标注为“网站公开销量字段”，不解释为经审计的真实成交量。</p><a href="https://www.cdfhnmall.com/product-list.html" target="_blank" rel="noreferrer">访问官方商品页 ↗</a></section>
+</main><div id="toast"></div><footer class="site-footer"><span>cdf 海南免税商品监测系统</span><span>数据来源：中免（海南）数字科技有限公司公开商城</span><span>仅供本地数据研究</span></footer><script src="/app.js"></script></body></html>
